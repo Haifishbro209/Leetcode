@@ -61,3 +61,29 @@ def romanToInt(s):
                     num += M 
         return num
 print(romanToInt("IV"))
+
+
+
+
+class Solution2:
+    def romanToInt(self, s: str) -> int:
+        dictonary = {
+            "I":1,
+            "V":5,            
+            "X":10,
+            "L":50,
+            "C":100,
+            "D":500,
+            "M":1000
+        }
+        num = 0
+        for l in range(len(s)):
+            num += dictonary[s[l]]
+            if l != 0:
+                if s[l-1] == "I":
+                    num += (V-I)
+                else:
+                    num += V
+            else:
+                num += V
+        return num
