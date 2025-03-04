@@ -1,7 +1,9 @@
-class Solution:
-    def longestCommonPrefix(self, strs: List[str]) -> str:
-        prefix = None
-        for s in range(len(strs)):
-            for l in range(len(strs[s])):
+prefix = None
+arr = []
+strs = ["flower","flow","flight"]
+for s in range(len(strs)):
+    string = strs[s]
+    for l in range(len(strs[s])):
+                
 
-                        
+
